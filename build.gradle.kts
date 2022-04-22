@@ -28,7 +28,7 @@ subprojects {
 
     dependencies {
         implementation("org.jason-lang", "jason", "2.5.2")
-        testImplementation("junit", "junit", "4.12")
+        testImplementation("junit", "junit", "4.13.2")
     }
 
     configure<JavaPluginConvention> {
