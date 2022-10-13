@@ -1,6 +1,6 @@
 [versions]
 kotlin = "1.7.20"
-tuprolog = "0.30.2"
+tuprolog = "0.30.3"
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
