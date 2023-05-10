@@ -40,7 +40,7 @@ subprojects {
         task<JavaExec>("run${mas2jFile.nameWithoutExtension.capitalize()}Mas") {
             group = "run"
             classpath = sourceSets.getByName("main").runtimeClasspath
-            main = "jason.infra.centralised.RunCentralisedMAS"
+            mainClass.set("jason.infra.centralised.RunCentralisedMAS")
             args(mas2jFile.path)
             standardInput = System.`in`
         }
