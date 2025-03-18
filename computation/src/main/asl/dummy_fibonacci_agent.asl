@@ -12,7 +12,7 @@ fib(X, Y) :-
 /* Plans */
 
 +!compute_fibonacci_until(N, N) <- 
-    !compute_fibonacci(N)
+    !compute_fibonacci(N);
     .print("Done") .
 
 +!compute_fibonacci_until(N, M) : N < M <- 
