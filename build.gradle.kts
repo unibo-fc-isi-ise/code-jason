@@ -30,12 +30,12 @@ subprojects {
     }
 
     dependencies {
-        implementation("io.github.jason-lang:interpreter:3.2.0")
+        implementation("io.github.jason-lang:jason-interpreter:3.2.1")
         testImplementation("junit", "junit", "4.13.2")
     }
 
     file(projectDir).listFiles().filter { it.extension == "mas2j" }.forEach { mas2jFile ->
-        task<JavaExec>("run${mas2jFile.nameWithoutExtension.capitalized()}Mas") {
+        tasks.register<JavaExec>("run${mas2jFile.nameWithoutExtension.capitalized()}Mas") {
             group = "run"
             classpath = sourceSets.getByName("main").runtimeClasspath
             mainClass.set("jason.infra.centralised.RunCentralisedMAS")
